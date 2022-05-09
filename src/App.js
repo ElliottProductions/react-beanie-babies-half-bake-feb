@@ -12,11 +12,11 @@ export default function App() {
     <Router>
       <div className='App'>
         <Switch>
-          <Route>
-            <BeaniesPage path="/"/>
+          <Route exact path="/">
+            <BeaniesPage />
           </Route>
-          <Route> 
-            <BeanieDetail path="/beanies/:id"/>
+          <Route path="/beanies/:id"> 
+            <BeanieDetail />
           </Route>
         </Switch>
       </div>
