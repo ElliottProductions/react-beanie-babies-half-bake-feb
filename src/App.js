@@ -13,10 +13,10 @@ export default function App() {
       <div className='App'>
         <Switch>
           <Route exact path="/">
-            <BeaniesPage />
+            <BeaniesPage/>
           </Route>
           <Route path="/beanies/:id"> 
-            <BeanieDetail />
+            <BeanieDetail/>
           </Route>
         </Switch>
       </div>
