@@ -30,7 +30,7 @@ function App() {
         {/* on click, this button should increment the page in state  */}
         <button >Next Page</button>
       </div>
-      {/* pass the beanie babies into the BeaniesList component */}
+      <BeaniesList beanieBabies={beanieBabies}/>
     </>
   );
 }
