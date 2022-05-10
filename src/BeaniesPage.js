@@ -7,15 +7,16 @@ function App() {
   const [beanieBabies, setBeanieBabies] = useState([]);
   const [page, setPage] = useState(1);
   const perPage = 40;
-  
+   
   useEffect(() => {
     async function fetch() {
       const from = page * perPage - perPage;
       const to = page * perPage;
       const beanies = await getBeanieBabies(from, to);
-
       setBeanieBabies(beanies);
+
     }
+    
 
     fetch();
   }, [page]); // what can you do with this array to trigger a fetch every time the page changes?
@@ -29,7 +30,7 @@ function App() {
         <button disabled={page <= 1}
           onClick={() => setPage(page - 1)}>Previous Page</button>
         {/* on click, this button should increment the page in state  */}
-        <button disabled={page >= 53}
+        <button disabled={page >= 1000}
           onClick={() => setPage(page + 1)}>Next Page</button>
       </div>
       <BeaniesList beanieBabies={beanieBabies}/>
